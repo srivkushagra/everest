@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<body>
+	<ui:composition template="./WEB-INF/template.xhtml">
+		<ui:define name="content">
+			<h2>Create User</h2>
+			<h:form>
+				<div class="divTable">
+					<div class="divTableBody">
+						<div class="divTableRow">
+							<div class="divTableCell1">Login:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.login}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Password:</div>
+							<div class="divTableCell2">
+								<h:inputSecret value="#{uzerItem.password}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Name:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.username}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Address Line 1:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.address1}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Address Line 2:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.address2}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">City:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.city}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">State:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.state}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Zip:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.zip}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Country:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.country}" />
+							</div>
+						</div>
+						<div class="divTableRow">
+							<div class="divTableCell1">Credit Card:</div>
+							<div class="divTableCell2">
+								<h:inputText value="#{uzerItem.creditcard}" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<p />
+				<h:commandButton value="Create User" action="user-status"
+					actionListener="#{uzerBean.addUzer()}" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
